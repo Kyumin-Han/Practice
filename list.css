@@ -1,0 +1,28 @@
+ul {
+    background-color: tan;
+    border: 1px solid red;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+li {
+    background-color: yellowgreen;
+    border: 1px solid blue;
+    background-color: yellow;
+    float: left;
+    width: 100px;
+    line-height: 1.6;
+
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    background-color: yellowgreen;
+    color: white;
+}

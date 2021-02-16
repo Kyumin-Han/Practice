@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Input Attributes</title>
+</head>
+
+<body>
+    <h2>input attributes</h2>
+    <form action="#">
+        아이디 <input type="text" name="id" required size="10"><br>
+        주소 <input type="text" name="addr" placeholder="주소를 입력하세요" size="50"><br>
+        가격 <input type="text" name="sid" value="50000" readonly><br>
+        <input type="submit">
+
+        <!-- value 속성은 사용자가 입력하는 값을 저장하는 곳이고
+            코딩 시 미리 지정해두면 해당 필드에 먼저 표시된다
+            사용자가 입력을 시작해도 그대로 유지된다
+            placeholder 속성은 해당입력창에 안내사항을 적어놓는 것이고
+            여기에는 값이 저장된 것이 아니다
+            readonly 속성은 개발자가 지정한 값 이외에 수정할 수
+            없는 데이터를 사용할 때 사용
+            required 속성은 해당 필드 입력값이 꼭 필요할 때 입력하지
+            않으면 서버로 제출되지 않는다
+            size 속성은 입력 필드의 길이를 설정할 수 있다 -->
+    </form>
+</body>
+
+</html>

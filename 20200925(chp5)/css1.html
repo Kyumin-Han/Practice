@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자{속성:값} */
+
+        /* *: 전체 선택자
+            모든 엘리먼트를 선택하여 적용 */
+
+        * {
+            color: blue;
+        }
+
+        /* block level 엘리먼트
+            공간을 블록 단위로 차지 */
+
+        /* tag 선택자 
+            모든 해당 태그들에 적용된다*/
+        /* 특정 태그를 선택하기 위해 태그에 클래스를 부여할 수 있다
+            선택자 사이에서 임의대로 부여를 할 수 있다 */
+        h1 {
+            background-color: orange;
+        }
+
+        p {
+            color: red;
+        }
+
+        /* 클래스 선택자는 마침표를 찍고 써준다 */
+        .ptag {
+            color: greenyellow;
+        }
+
+        /* id선택자는 앞에 #을 쓰고 선택한다 */
+        #ptag1 {
+            color: black;
+        }
+
+        p {
+            color: yellow;
+        }
+
+        /* 선택자 우선순위
+            id가 class보다 우선순위가 높다
+            우선순위가 높은 태그가 코드의 위쪽에 있으면
+            하위에 있는 태그들은 실행되지 않는다
+            같은 우선순위의 태그 선택자는 코드에서 아랫줄에 있는것이 실행된다
+            
+            태그 자체에 스타일을 주면 id보다 우선순위가 높지만
+            가급적 사용하지 않고 css파일에 따로 작성하는 것이 좋다
+            코드 가독성이 떨어지기 때문에 가능하면 CSS파일 HTML파일을
+            분리해 놓는게 놓다
+
+            1.태그 자체에 붙이는 태그
+            2.id
+            3.클래스, 속성, hover, focus 등
+         */
+    </style>
+</head>
+
+<body>
+    <h1>CSS Selector</h1>
+    <!-- p{$-pTag} -->
+    <p>1-pTag</p>
+    <p>2-pTag</p>
+
+    <!-- class 속성은 모든 태그에 다 사용할 수 있다
+        class 속성은 겹쳐도 상관없다
+        id 속성도 모든 태그에 사용할 수 있지만 중복 되면 안된다-->
+    <p class="ptag1 ptag2">3-pTag</p>
+    <p id="ptag1" class="ptag">4-pTag</p>
+    <p>5-pTag</p>
+
+    <!-- div 태그도 block level 엘리먼트로
+        블록 단위로 공간을 차지한다 
+        div 태그 안에 오는 태그들은
+        div 태그의 속성을 물려받는 것이 있고 물려받지 않는 것이 있다
+        폰트의 크기, 배경색상, 폰트색상 등은 상속받지 않는다-->
+    <div class="ptag">
+        12345
+        <p>1-div</p>
+        <p>2-div</p>
+        <p>3-div</p>
+    </div>
+</body>
+
+</html>

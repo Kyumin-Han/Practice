@@ -1,0 +1,42 @@
+body {
+    margin: 0 auto;
+    /* width: 1000px; */
+}
+
+header {
+    font-size: 3em;
+    text-align: center;
+}
+
+.container {
+    height: 500px;
+    background-color: greenyellow;
+    display: flex;
+    /* row(행)가 기본값 */
+    /* flex-direction: column-reverse; */
+    /* column(열)을 반대로 */
+    /* 브라우저 크기를 줄이면 같이 줄어든다 = 유연하다(Flexible) */
+
+    flex-wrap: wrap;
+    /* 기본 nowrap
+    wrap으로 두면 브라우저 크기를 줄이면 줄을 바꾼다
+    부분의 높이를 통해 n분의 1 */
+
+    justify-content: space-evenly;
+    /* 가로방향정렬 방식 지정 center, end, around, space-between, space-evenly */
+
+    align-items: center;
+    /* 기본 stretch
+    flex-start,end,center */
+
+    align-content: space-evenly;
+}
+
+.item {
+    width: 100px;
+    font-size: 3em;
+    text-align: center;
+    background-color: darkblue;
+    color: yellow;
+    border: 1px solid gray;
+}

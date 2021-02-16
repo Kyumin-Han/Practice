@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+</head>
+
+<body>
+    <h2>select</h2>
+    <form action="#">
+        <!-- <select name="coffee" size="4" multiple> -->
+        <select name="coffee" multiple>
+            <optgroup label="커피">
+                <option value="ameri">아메리카노</option>
+                <option value="cappu">카푸치노</option>
+                <option value="latte">카페라떼</option>
+                <option value="mocha">카페모카</option>
+            </optgroup>
+            <optgroup label="한방차">
+                <option value="green">녹차</option>
+                <option value="jujube">대추차</option>
+                <option value="ginger">생강차</option>
+            </optgroup>
+
+        </select>
+        <input type="submit" value="주문">
+
+        <!-- select태그는 input태그와 구분된다
+            multiple은 다중 선택이 가능하게 해주는 속성이다
+            size 속성도 사용 가능하다
+            
+            여러개의 선택 그룹을 만들때
+            optgroup을 사용하고 그 하위에 option으로 목록을 생성한다-->
+    </form>
+</body>
+
+</html>

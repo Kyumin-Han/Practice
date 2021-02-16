@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sunflower:wght@500&display=swap');
+
+body {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 80px;
+    font-size: 3em;
+    line-height: 80px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    font-family: 'Sunflower', sans-serif;
+}
+
+.menubar {
+    margin: 1% 1%;
+    border: 1px solid gray;
+}
+
+.menubar ul {
+    padding-left: 10%;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.menubar li {
+    width: 15%;
+    margin: 0 1%;
+    float: left;
+}
+
+.menubar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menubar a:hover {
+    color: red;
+}
+
+.main {
+    overflow: hidden;
+    /* background: yellow; */
+    margin: 1% 1%;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main nav {
+    width: 100%;
+    border: 1px solid gray;
+    float: left;
+}
+
+.main nav ul {
+    padding: 0;
+    margin: 1% 0;
+    list-style: none;
+}
+
+.main nav a {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2;
+    font-family: 'Sunflower', sans-serif;
+}
+
+.main a:hover {
+    background-color: blue;
+    color: white;
+}
+
+.main section {
+    float: left;
+}
+
+figure {
+    margin: 0;
+}
+
+.product {
+    padding: 10px;
+    float: left;
+    border: 1px solid gray;
+}
+
+.main aside {
+    width: 100%;
+    border: 1px solid gray;
+    float: right;
+}
+
+aside p {
+    padding: 0 2%;
+}
+
+footer {
+    margin: 1% 1%;
+    padding: 0 2%;
+    border: 1px solid gray;
+}
+
+@media screen and (min-width:600px) {
+
+    .main,
+    .menubar,
+    footer {
+        margin: 1% 0;
+    }
+
+    .main nav {
+        width: 19%;
+    }
+
+    .main section {
+        width: 80%;
+        margin-left: 1%;
+    }
+
+    .product {
+        width: 32%;
+    }
+
+    .product:nth-child(2) {
+        margin: 0 2%;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .main section {
+        width: 60%;
+    }
+
+    .main aside {
+        width: 19%;
+    }
+}

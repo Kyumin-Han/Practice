@@ -1,0 +1,44 @@
+body {
+    max-width: 1500px;
+    min-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    background-color: yellowgreen;
+    margin: 0;
+}
+
+.container {
+    /* background-color: beige; */
+    margin: 1% 0;
+    /* border: 5px solid red; */
+    overflow: hidden;
+}
+
+nav {
+    background-color: gold;
+    width: 15%;
+    float: left;
+}
+
+main {
+    background-color: chartreuse;
+    width: 66%;
+    margin-left: 2%;
+    float: left;
+}
+
+img {
+    width: 100%;
+}
+
+aside {
+    background-color: gold;
+    width: 15%;
+    float: right;
+}
+
+footer {
+    background-color: coral;
+}

@@ -1,0 +1,53 @@
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    /* max-width 해당 값이 넘어가면 자동으로 가운데 정렬 */
+}
+
+header {
+    height: 100px;
+    font-size: 3em;
+    color: blue;
+    font-weight: 900;
+    text-align: center;
+
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #ffd65e 0%, #ffe59e 14%, #ff7272 73%, #febf04 100%);
+
+    line-height: 100px;
+    /* line-height를 해당 박스의 높이와 같게 해주면 중앙에 정렬 */
+}
+
+.container {
+    height: 500px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    height: 80px;
+    background-color: skyblue;
+    margin-top: 1%;
+}
+
+nav,
+aside {
+    width: 15%;
+    /* flex-shrink: 0; */
+    background-color: yellowgreen;
+}
+
+section {
+    /* flex-grow: 1; */
+    width: 68%;
+    background-color: yellow;
+}
+
+/* text-overflow
+clip = 문자열 자름 기본값
+ellipsis = 생략부호 ... 사용 */
+
+/* white-space 
+normal = 단어가 바뀔때 줄바꿈 허용 
+nowrap = 단어가 바뀔때 줄바꿈 허용 x*/

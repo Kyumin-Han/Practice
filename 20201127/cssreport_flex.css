@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nanum+Pen+Script&display=swap');
+
+body {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.sidelink {
+    background-color: orangered;
+    margin: 0;
+    flex: 1;
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 3%;
+    font-family: 'Gugi', cursive;
+}
+
+.links a {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.6;
+    text-decoration: none;
+    color: white;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.links a:hover {
+    background-color: blue;
+}
+
+.articles {
+    padding: 0 3%;
+}
+
+.team {
+    padding: 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.ceo,
+.designer,
+.architect {
+    padding: 0 2%;
+}
+
+img {
+    width: 100%;
+}
+
+label {
+    display: block;
+    width: 15%;
+    margin: 1% 5%;
+    /* text-align: right; */
+}
+
+input {
+    width: 80%;
+    margin-left: 5%;
+}
+
+button[type="submit"] {
+    font-size: 1.2em;
+    font-weight: 900;
+    color: white;
+    margin-left: 5%;
+    background-color: darkblue;
+}
+
+.footer {
+    margin: 1% 0;
+    padding: 0 2%;
+}
+
+@media screen and (min-width:800px) {
+    body {
+        flex-wrap: nowrap;
+    }
+
+    .sidelink {
+        flex: 1;
+    }
+
+    .main {
+        flex: 3;
+        border: 1px solid gray;
+        /* background: yellow; */
+    }
+
+    .ceo,
+    .designer,
+    .architect {
+        width: 30%;
+    }
+
+    label {
+        display: inline-block;
+        margin: 1% 1%;
+        text-align: right;
+    }
+
+    input {
+        width: 75%;
+        margin: 0;
+    }
+
+}

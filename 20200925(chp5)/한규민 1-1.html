@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1-1.css">
+</head>
+
+<body>
+    <h2>웹개발 지원서</h2>
+    <hr>
+
+    <form action="#">
+        <label for="Search">Search</label>
+        <input id="Search" type="Search" name="Search" placeholder="검색">
+
+        <fieldset>
+            <legend>개인정보</legend>
+            이름 <input type="text" name="name" placeholder="공백없이 입력하세요" required><br>
+            연락처 <input type="tel" name="phonenum" required><br>
+            E-mail <input type="email" name="email" required size="40"><br>
+            신청일 <input type="date" name="date" reqruied>
+        </fieldset>
+
+        <h3>지원분야 1</h3>
+
+        <input id="apply1-1" type="radio" name=apply1 value="HTML5">
+        <label for="apply1-1">HTML5</label><br>
+
+        <input id="apply1-2" type="radio" name=apply1 value="CSS3">
+        <label for="apply1-2">CSS3</label><br>
+
+        <input id="apply1-3" type="radio" name=apply1 value="Javascript">
+        <label for="apply1-3">Javascript</label><br>
+
+        <input id="apply1-4" type="radio" name=apply1 value="Java">
+        <label for="apply1-4">Java</label><br>
+
+        <h3>지원분야 2</h3>
+
+        <input id="apply2-1" type="checkbox" name="apply2.1" value="HTML5" multiple>
+        <label for="apply2-1">HTML5</label><br>
+
+        <input id="apply2-2" type="checkbox" name="apply2.2" value="CSS3">
+        <label for="apply2-2">CSS3</label><br>
+
+        <input id="apply2-3" type="checkbox" name="apply2.1" value="Javascirpt">
+        <label for="apply2-3">Javascript</label><br>
+
+        <input id="apply2-4" type="checkbox" name="apply2.1" value="Java">
+        <label for="apply2-4">HTML5</label><br>
+        <br>
+        <select name="apply" multiple size="5">
+            <option value="HTML5">HTML5</option>
+            <option value="CSS3">CSS3</option>
+            <option value="jQuary">jQuary</option>
+            <option value="Java">Java</option>
+            <option value="C++">C++</option>
+        </select>
+
+        <h3>기타 보유 기술</h3>
+        <textarea name="" cols="80" rows="7"></textarea><br>
+
+        <input type="submit" value="신청">
+        <input type="reset" value="다시쓰기">
+    </form>
+</body>
+
+</html>

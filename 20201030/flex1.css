@@ -1,0 +1,69 @@
+.container {
+    height: 400px;
+    background-color: gold;
+    display: flex;
+    /* 자손의 높이를 부모의 높이까지 맞춘다 */
+
+    /* flex-direction: column-reverse; */
+    /* reverse 열을 반대 순서로 정렬 */
+    /* column 행을 기준으로 정렬 */
+
+    /* flex-wrap: wrap; */
+    /* nowrap이 기본값 */
+    /* wrap은 표시할 공간이 없으면 줄을 바꿔주는 기능을 한다 */
+
+    /* 가로 정렬 */
+    /* justify-content: space-evenly; */
+    /* flex-start 가 기본 = 왼쪽에 붙어서 표시 */
+    /* fles-end = 오른쪽에 붙어서 정렬 */
+    /* center = 가운데 정렬 */
+    /* 박스와 박스 사이에 간격 없음 */
+
+    /* space between = 양쪽에 있는것은 양쪽에 붙어서 정렬하고 가운데는 간격을 두고 정렬 */
+    /* space-around = 모든 박스에 양쪽에 간격을 두고 정렬 */
+    /* space-evenly = 모든 박스의 간격이 같도록 정렬 */
+
+    /* 세로 정렬 */
+    align-items: center;
+    /* 기본값 strecth = 부모의 크기까지 정렬 */
+    /* flex-start = 위쪽으로 붙어서 글자 크기까지 정렬 */
+    /* fles-end = 아래쪽으로 붙어서 글자 크기까지 정렬 */
+    /* center 부모의 가운데를 기준으로 정렬 */
+
+    /* align-content: space-evenly; */
+    /* flex-start 줄과 줄 사이에 공백 없이 정렬 */
+    /* flex-end 줄과 줄 사이에 공백 없이 아래쪽 정렬 */
+    /* center 줄과 줄 사이에 공백 없이 중간에 정렬 */
+    /* space-between 처음과 끝줄 은 위 아래쪽에 각각 정렬 */
+    /* space-around 모든 박스의 상하좌우에 공백 생기고 정렬 */
+    /* space-evenly 모든 박스의 상하좌우 공백을 똑같이 하고 정렬 */
+}
+
+.items {
+    width: 150px;
+    font-size: 3em;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border: 1px solid gray;
+}
+
+.items:nth-child(3) {
+    /* order: -1; */
+    /* order 값이 작을수록 제일 앞으로 온다 */
+
+    /* flex-grow: 1; */
+    /* 부모의 영역에 남은 공간이 있으면 flex-grow에 지정한 값의 태그가 흡수 */
+    align-self: flex-start;
+    /* align-self 값을 준 태그만 정렬 */
+}
+
+.items:nth-child(5) {
+    flex-grow: 1;
+    /* 두개 이상의 태그에 같은 값의 flex-grow를 나눠 흡수 */
+    /* flex-grow의 기본값 0 */
+    /* flex-grow 남은 공간을 나눠 같는 비율을 다르게 줄 수 있다 */
+
+    flex-shrink: 0;
+    /* flex-shrink: 0; 해당 값의 박스는 브라우저 크기를 줄여도 줄어들지 않는다 */
+}
