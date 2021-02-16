@@ -1,0 +1,23 @@
+
+public class Programmers4 {
+
+	public static void main(String[] args) {
+		String orgS = "1234";
+		
+		System.out.println(solution(orgS));
+	}
+
+	public static boolean solution(String s) {
+		boolean answer = true;
+
+		char[] getChar = s.toCharArray();
+		
+		for(int i = 0; i < getChar.length; i++)
+		{
+			
+		}
+
+		return answer;
+	}
+
+}

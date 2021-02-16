@@ -1,0 +1,18 @@
+package SellBuying;
+
+public class Seller {
+	private final int PRICE = 2500;
+	
+	private int money;
+	
+	private int productNum;
+	
+	public Seller(int productNum, int money) {
+		System.out.println("판매자 생성자 호출...");
+		
+		setProductNum(productNum);
+		setMoney(money);
+		
+		System.out.println(this);
+	}
+}

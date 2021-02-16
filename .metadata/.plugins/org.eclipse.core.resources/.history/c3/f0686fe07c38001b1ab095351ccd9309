@@ -1,0 +1,38 @@
+import java.util.*;
+public class Programmers5 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		
+		int num;
+		System.out.print("숫자를 입력하세요 : ");
+		num = input.nextInt();
+		
+		input.close();
+		
+		System.out.println(solution(num));
+
+	}
+	
+	public static int solution(int num) {
+		int answer = 0;
+		
+		while(num != 1)
+		{
+			if(num %2 == 0)
+			{
+				num = num/2;
+			}
+			else
+			{
+				num = (num*3) + 1;
+			}
+		}
+		
+		answer = num;
+		
+		return answer;
+	}
+
+}

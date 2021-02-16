@@ -1,0 +1,101 @@
+package OOP;
+
+public class Student {
+	private String name;
+	private String sid;
+	private String phone;
+	private String gender;
+	private String dept;
+	
+	public String getSid() {
+		return sid;
+	}
+
+	public void setSid(String sid) {
+		if(sid.length() != 7)
+		{
+			System.out.println("학번은 7자리이어야 합니다.");
+			return;
+		}
+		
+		if(isNumeric(sid) == true)
+		{
+			this.sid = sid;	
+		}
+		else 
+		{
+			System.out.println("학번은 숫자로만 구성되어야 합니다.");
+		}
+		
+	}
+	
+	public boolean isNumeric(String sid) {
+		
+		for(int i = 0; i < sid.length(); i++)
+		{
+			char c = sid.charAt(i);
+			if(c < '0' || c > '9')
+			{
+				return false;
+			}
+			
+		}
+		
+		return true;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+
+	public int getSlevel() {
+		return slevel;
+	}
+
+	private int slevel;
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		if(name.length() < 2)
+		{
+			System.out.println("이름은 2자 이상이어야 합니다.");
+		}
+		else
+		{
+			this.name = name;
+		}
+	}
+	
+	public void study() {
+		slevel++;
+		System.out.println(name+"이(가) 공부를 합니다.");
+	}
+	
+	public void play() {
+		slevel--;
+		System.out.println(name+"이(가) 놉니다.");
+	}
+}

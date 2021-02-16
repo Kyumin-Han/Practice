@@ -1,0 +1,6 @@
+package OOPv2;
+
+public class Professor extends Person{
+
+
+}

@@ -1,0 +1,50 @@
+import java.util.*;
+public class Programmers3 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int month;
+		int day;
+		
+		System.out.print("월을 입력하세요 : ");
+		month = input.nextInt();
+		
+		System.out.print("일을 입력하세요 : ");
+		day = input.nextInt();
+		
+		System.out.print(solution(month,day));
+
+	}
+	
+	public static String solution(int a, int b) {
+		String answer = "";
+		
+		int dayCount = 1;
+		
+		if(a == 1)
+		{
+			dayCount = 6;
+			for(int i = 0; i < 31; i++)
+			{
+				
+				if(dayCount != 7)
+				{
+					dayCount++;
+				}
+				else if(dayCount == 7)
+				{
+					dayCount = 1;
+					continue;
+				}
+			}
+			
+			System.out.println(dayCount);
+			
+			
+		}
+		
+		return answer;
+	}
+
+}

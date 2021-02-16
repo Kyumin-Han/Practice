@@ -1,0 +1,36 @@
+
+public class Programmers4 {
+
+	public static void main(String[] args) {
+		String orgS = "12234";
+		System.out.println(solution(orgS));
+	}
+
+	public static boolean solution(String s) {
+		boolean answer = true;
+
+		switch(s.length())
+		{
+			case 4:
+			case 6:
+				for(int i = 0; i < s.length(); i++)
+				{
+					if(s.charAt(i) > '0' && s.charAt(i) < '9')
+					{
+						answer = true;
+					}
+				}
+			default:
+				for(int i = 0; i < s.length(); i++)
+				{
+					if(s.charAt(i) >= 'a')
+					{
+						answer = false;
+					}
+				}
+		}
+
+		return answer;
+	}
+
+}

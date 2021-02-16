@@ -1,0 +1,44 @@
+
+public class Programmers7 {
+
+	public static void main(String[] args) {
+		int num1 = 3;
+		int num2 = 5;
+		
+		solution(num1, num2);
+	}
+	
+	public static long solution(int a, int b) {
+		long answer = 0;
+		
+		int sum = 0
+		
+		if(a == b)
+		{
+			sum = a;
+		}
+		else
+		{
+			int temp;
+			if(a < b)
+			{
+				temp = a;
+				a = b;
+				b = temp;
+			}
+			
+			for(int i = a; i <= b; i++)
+			{
+				sum += i;
+			}
+			
+		}
+		
+		answer = sum;
+		
+		System.out.println(answer);
+		
+		return answer;
+	}
+
+}

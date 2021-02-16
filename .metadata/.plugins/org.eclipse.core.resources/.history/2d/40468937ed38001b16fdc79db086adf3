@@ -1,0 +1,32 @@
+package OOPv2;
+
+public class Professor extends Person{
+	private String[] lectures = new String[5];
+	
+	@Override
+	public void print() {
+		System.out.println("name: " + getName() + ", sid : " + getSid() + ", phone:" + getPhone() + ", gender : " + getGender() + ", dept: " + getDept() + ", lectures" + getLectures());
+	}
+	
+	public String[] getLectures() {
+		return lectures;
+	}
+	public void setLectures(String[] lectures) {
+		for(int i = 0; i < lectures.length && i < 5; i++)
+		{
+			this.lectures[i] = lectures[i];
+		}
+	}
+	
+	@Override
+	public void setSid(String sid) {
+		if(sid.length() != 7)
+		{
+			System.out.println("사번은 7자리이어야 합니다.");
+			return;
+		}
+		
+		super.setSid(sid);
+	}
+
+}

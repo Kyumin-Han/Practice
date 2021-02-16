@@ -1,0 +1,79 @@
+package OOPv2;
+
+import java.util.Arrays;
+
+public class Student extends Person{
+	private int slevel;
+	private int[] grades = new int[10];
+	private int count = 0;
+	
+	public void addGrade(int jumsu) {
+		grades[count++] = jumsu;
+	}
+	
+	public int getMaxGrade() {
+		int max = -1;
+		for(int i = 0; i < count; i++)
+		{
+			if(max < grades[i])
+			{
+				max = grades[i];
+			}
+		}
+		
+		return max;
+	}
+	
+	public int getMinGrade() {
+		int min = Integer.MAX_VALUE;
+		for(int i = 0; i < count; i++)
+		{
+			if(min > grades[i])
+			{
+				min = grades[i];
+			}
+		}
+		
+		return min;
+	}
+	
+	public double getAverage() {
+		int sum = 0;
+		
+		for(int i = 0; i < count; i++)
+		{
+			sum += grades[i];
+		}
+		
+		return (double)sum/count;
+	}
+	
+	public int[] getGrades() {
+//		return grades;
+		int[] copy = Arrays.copyOf(grades, count);
+		return copy;
+	}
+	
+	public String getAllGrades() {
+		String result = "[";
+		
+		for(int i = 0; i < count; i++)
+		{
+			result += grades[i] + " ";
+		}
+		
+		result += "]";
+		return result;
+	}
+	
+	public void study() {
+		slevel++;
+		System.out.println(name+"이(가) 공부를 합니다.");
+	}
+	
+	public void play() {
+		slevel--;
+		System.out.println(name+"이(가) 놉니다.");
+	}
+
+}

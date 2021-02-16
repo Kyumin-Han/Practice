@@ -1,0 +1,23 @@
+package challenge3_4;
+
+public class PrintAstaMain {
+
+	public static void main(String[] args) {
+//		PrintAsta pa = new PrintAsta();
+//		
+//		pa.printStar();
+		
+		String str = "";
+		for(int i = 0; i < 4; i++)
+		{
+			for(int j = i; j < i; j++)
+			{
+				str += "*";
+			}
+			
+			str += " ";
+		}
+
+	}
+
+}

@@ -1,0 +1,6 @@
+package OOPv2;
+
+public class Student extends Person{
+
+
+}

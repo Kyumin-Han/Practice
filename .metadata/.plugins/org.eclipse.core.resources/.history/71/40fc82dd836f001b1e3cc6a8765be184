@@ -1,0 +1,39 @@
+package personalprojectgame;
+
+public class User {
+	private String name;
+	int hp = 200;
+	private int atkAbility = 10;
+	
+	public User(String name) {
+		this.name = name;
+	}
+	
+	public String getUserName() {
+		return name;
+	}
+
+	public void attack(Slime slime) {
+		slime.hp -= atkAbility;
+		
+		if(slime.hp < 1)
+		{
+			GameFrame.label.setText(slime.getName() + " is dead");
+			GameFrame.label2.setText("User's HP: " + hp);
+		}
+		else
+		{
+			GameFrame.label.setText(name + "'s attack. " + slime.getName() + "'s HP: " + slime.hp);
+		}
+	}
+	
+	public void increaseHp() {
+		this.hp = hp + 50;
+		this.atkAbility = atkAbility + 10;
+	}
+	
+	public void increaseAttack() {
+		this.hp = hp + 25;
+		this.atkAbility = atkAbility + 20;
+	}
+}

@@ -1,0 +1,10 @@
+package OOPv2;
+
+public class Person {
+	private String name;
+	private String sid;
+	private String phone;
+	private String gender;
+	private String dept;
+
+}

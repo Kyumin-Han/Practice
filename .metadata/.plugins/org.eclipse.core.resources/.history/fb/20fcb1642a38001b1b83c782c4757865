@@ -1,0 +1,99 @@
+package OOPv2;
+
+public class Person {
+	final private int MALE = 0;
+	final private int FEMALE = 1;
+	private String name;
+	private String sid;
+	private String phone;
+	private String gender;
+	private String dept;
+
+	public String getSid() {
+		return sid;
+	}
+
+	public void setSid(String sid) {
+		if(sid.length() != 7)
+		{
+			System.out.println("학번은 7자리이어야 합니다.");
+			return;
+		}
+
+		if(isNumeric(sid) == true)
+		{
+			this.sid = sid;	
+		}
+		else 
+		{
+			System.out.println("학번은 숫자로만 구성되어야 합니다.");
+		}
+
+	}
+
+	private boolean isNumeric(String sid) {
+
+		for(int i = 0; i < sid.length(); i++)
+		{
+			char c = sid.charAt(i);
+			if(c < '0' || c > '9')
+			{
+				return false;
+			}
+
+		}
+
+		return true;
+	}
+	
+	public void setGender(int gender) {
+		if(gender == FEMALE)
+		{
+			this.gender = "여자";
+		}
+		else if(gender == MALE)
+		{
+			this.gender = "남자";
+		}
+		else
+		{
+			System.out.println("잘못된 값입니다. 0:여자, 1:남자");
+		}
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		if(name.length() < 2)
+		{
+			System.out.println("이름은 2자 이상이어야 합니다.");
+		}
+		else
+		{
+			this.name = name;
+		}
+	}
+	
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+	
+	public void print() {
+		System.out.println("name: " + name + ", sid : " + sid + ", phone:" + ", gender : " + gender);
+	}
+
+}

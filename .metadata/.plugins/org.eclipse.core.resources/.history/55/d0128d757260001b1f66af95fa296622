@@ -1,0 +1,11 @@
+package challenge3_1;
+
+public class SumMain {
+
+	public static void main(String[] args) {
+		EvenNumSum es = new EvenNumSum();
+		OddNumSum os = new OddNumSum();
+
+	}
+
+}

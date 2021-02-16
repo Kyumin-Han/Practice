@@ -1,0 +1,16 @@
+package OOPv2;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		Person person = new Person();
+		person.setDept("컴정");
+		person.setGender("남자");
+		person.setName("아이언맨");
+		person.setPhone("010-1111-2222");
+		person.setSid("2001234");
+		
+		person.print();
+	}
+
+}

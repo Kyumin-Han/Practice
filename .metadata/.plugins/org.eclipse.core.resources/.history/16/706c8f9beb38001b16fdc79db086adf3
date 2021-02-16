@@ -1,0 +1,27 @@
+package OOPv2;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		Person person = new Person();
+		person.setDept("컴정");
+		person.setGender("남자");
+		person.setName("아이언맨");
+		person.setPhone("010-1111-2222");
+		person.setSid("2001234");
+		
+		person.print();
+		
+		Student std = new Student();
+		std.setDept("컴정");
+		std.setGender("여자");
+		std.setName("스칼렛요한슨");
+		std.setPhone("010-1234-1111");
+		std.setSid("2001112");
+		std.addGrade(98);
+		std.addGrade(97);
+		
+		std.print();
+	}
+
+}

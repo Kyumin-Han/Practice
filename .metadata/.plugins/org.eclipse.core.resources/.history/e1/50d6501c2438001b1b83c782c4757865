@@ -1,0 +1,9 @@
+package OOP;
+
+public class Professor {
+	private String name;
+	private String sid;
+	private String dept;
+	private String phone;
+	private String[] lectures = new String[5];
+}

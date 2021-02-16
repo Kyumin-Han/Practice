@@ -1,0 +1,18 @@
+package OOP;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		Professor p1 = new Professor();
+		p1.setName("톰크루즈");
+		
+		System.out.println(p1);
+		
+		Professor p2 = new Professor();
+		p2.setName("조디포스터");
+
+		
+		System.out.println(p2);
+	}
+
+}

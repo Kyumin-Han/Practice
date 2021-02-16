@@ -1,0 +1,21 @@
+package Lambda;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		Flyable flyable = new FlyingCar();
+		flyable.fly();
+		
+		Flyable flyable2 = new Flyable() {
+
+			@Override
+			public void fly() {
+				System.out.println("«œ¥√¿ª ≥≥¥œ¥Ÿ.");
+			}
+		};
+		
+		flyable2.fly();
+
+	}
+
+}

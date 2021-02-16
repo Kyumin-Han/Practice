@@ -1,0 +1,204 @@
+package personalprojectgame;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+import javax.swing.plaf.*;
+
+public class GameFrame extends JFrame{
+	private JButton button1;
+	private JButton button2;
+	private JButton button3;
+	
+	Slime s1 = new Slime("Slime1");
+	Slime s2 = new Slime("Slime2");
+	Slime sBoss = new Slime("Boss");
+	User user = new User("User");
+	
+	static JLabel label = new JLabel("게임을 시작합니다.");
+	static JLabel label2 = new JLabel();
+	static JLabel roundLabel = new JLabel();
+	static JLabel slime1Hp = new JLabel();
+	static JLabel slime2Hp = new JLabel();
+	
+	private JPanel roundPanel = new JPanel();
+	private JPanel panel = new JPanel();
+	
+	static int round = 0;
+	static Random incAtk = new Random();
+	
+	private ImageIcon s3Img = new ImageIcon(GameFrame.class.getResource("/personalprojectgame/img/slime(red).png"));
+	private JLabel slime3Label = new JLabel();
+	private Font font = new Font("맑은 고딕", Font.BOLD, 20);
+	public GameFrame() {
+		this.setTitle("Crash Slime");
+		
+		this.setSize(350, 350);
+		
+		this.setLocationRelativeTo(null);
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		button1 = new JButton(s1.getName());
+		button2 = new JButton(s2.getName());
+		button3 = new JButton(sBoss.getName());
+		
+		button1.setFont(font);
+		button2.setFont(font);
+		
+		
+		JLabel slime1Label = new JLabel();
+		JLabel slime2Label = new JLabel();
+		
+		ImageIcon s1Img = new ImageIcon(GameFrame.class.getResource("/personalprojectgame/img/slime(blue).png"));
+		ImageIcon s2Img = new ImageIcon(GameFrame.class.getResource("/personalprojectgame/img/slime(red).png"));
+		
+		slime1Label.setIcon(s1Img);
+		slime1Label.setBounds(30, 30, 122, 130);
+		slime1Label.setHorizontalAlignment(slime1Label.CENTER);
+		
+		slime2Label.setIcon(s2Img);
+		slime2Label.setBounds(182, 30, 122, 130);
+		slime2Label.setHorizontalAlignment(slime2Label.CENTER);
+		
+		button1.setBounds(30, 170, 122, 30);
+		button2.setBounds(180, 170, 122, 30);
+		button3.setBounds(91, 170, 152, 30);
+		
+		button1.addActionListener((e) -> {
+			battle(s1);
+			
+			slime1Hp.setText("Slime1's HP: " + s1.hp);
+		});
+		button2.addActionListener((e) -> {
+			battle(s2);
+			
+			slime2Hp.setText("Slime2's HP: " + s2.hp);
+		});
+		
+		
+		label.setBounds(30, 210, 274, 50);
+		label.setHorizontalAlignment(label.CENTER);
+		
+		label2.setBounds(30, 240, 274, 50);
+		label2.setText(user.getUserName() +"'s HP: " + user.hp);
+		label2.setHorizontalAlignment(label2.CENTER);
+		
+		slime1Hp.setBounds(30, 10, 122, 20);
+		slime1Hp.setText("Slime1 Hp: " + s1.hp);
+		slime1Hp.setHorizontalAlignment(slime1Hp.CENTER);
+		
+		slime2Hp.setBounds(182, 10, 122, 20);
+		slime2Hp.setText("Slime2 Hp: " + s2.hp);
+		slime2Hp.setHorizontalAlignment(slime2Hp.CENTER);
+		
+		
+		roundLabel.setText("Round " + (round+1));
+		roundLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20));
+		
+		panel.add(button1);
+		panel.add(button2);
+		panel.add(label);
+		panel.add(label2);
+		panel.add(slime1Label);
+		panel.add(slime2Label);
+		panel.add(slime1Hp);
+		panel.add(slime2Hp);
+		panel.setBackground(Color.WHITE);
+		
+		roundPanel.add(roundLabel);
+		roundPanel.setBackground(new Color(255, 255, 255));
+		roundPanel.setForeground(new Color(0, 0, 0));
+		
+		panel.setLayout(null);
+		
+		this.add(panel, BorderLayout.CENTER);
+		this.add(roundPanel, BorderLayout.NORTH);
+		
+		this.setVisible(true);
+	}
+	
+	private void battle(Slime s) {
+		if(s.hp < 1) {
+			label.setText(s.getName() + " is dead...");
+		}
+		else
+		{
+			user.attack(s);
+			s.attack(user);
+		}
+		
+		if(s1.hp < 1 && s2.hp < 1)
+		{	
+			round++;
+			initializeSlime(s1);
+			initializeSlime(s2);
+			JOptionPane.showMessageDialog(null, "Round Clear!!");
+			String reward = JOptionPane.showInputDialog("Choose Item(HP or ATTACK)");
+			if(reward.equalsIgnoreCase("hp"))
+			{
+				user.increaseHp();
+			}
+			else if(reward.equalsIgnoreCase("attack"))
+			{
+				user.increaseAttack();
+			}
+							
+			roundLabel.setText("Round " + (round + 1));			
+		}
+	}
+	
+	public void initializeSlime(Slime slime) {
+		//		this.hp = 100;
+		
+		switch(GameFrame.round)
+		{
+			// 슬라임 공격력, 체력 조정
+		
+			case 0:
+				break;
+			case 1:
+				slime.hp = 130;
+				break;
+			case 2:
+				slime.hp = 150;
+				break;
+			case 3:
+				s1.hp = 170;
+				s2.hp = 170;
+				break;
+			case 4:
+				s1.hp = 190;
+				s2.hp = 190;
+				break;
+			case 5:
+				s1.hp = 210;
+				s2.hp = 210;
+				break;
+			case 6:
+				s1.hp = 230;
+				s2.hp = 230;
+				break;
+			case 7:
+				s1.hp = 250;
+				s2.hp = 250;
+				break;
+			case 8:
+				s1.hp = 270;
+				s2.hp = 270;
+			case 9:
+				s1.hp = 300;
+				s2.hp = 300;
+				break;
+				default:
+					break;
+		}
+	}
+	
+}
+
+
+
+
+
+

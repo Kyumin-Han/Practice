@@ -1,0 +1,16 @@
+package OOPv2;
+
+public class Professor extends Person{
+	private String[] lectures = new String[5];
+	
+	public String[] getLectures() {
+		return lectures;
+	}
+	public void setLectures(String[] lectures) {
+		for(int i = 0; i < lectures.length && i < 5; i++)
+		{
+			this.lectures[i] = lectures[i];
+		}
+	}
+
+}

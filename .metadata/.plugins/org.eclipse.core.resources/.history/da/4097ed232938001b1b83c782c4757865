@@ -1,0 +1,9 @@
+package OOPv2;
+
+public class Professor {
+
+	public Professor() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

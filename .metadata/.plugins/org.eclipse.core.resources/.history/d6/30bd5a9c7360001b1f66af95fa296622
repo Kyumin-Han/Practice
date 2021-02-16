@@ -1,0 +1,12 @@
+package challenge3_4;
+
+public class PrintAstaMain {
+
+	public static void main(String[] args) {
+		PrintAsta pa = new PrintAsta();
+		
+		pa.printStar();
+
+	}
+
+}

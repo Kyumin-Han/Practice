@@ -1,0 +1,50 @@
+package OOPv2;
+
+public class Main2 {
+	
+	private static void nameNphoneOnly(Student std) {
+		System.out.println("이름은 " + std.getName() +"이고 전화번호는 " + std.getPhone() + "입니다.");
+	}
+
+	public static void main(String[] args) {
+		Person person = new Person();
+		person.setDept("컴정");
+		person.setGender("남자");
+		person.setName("아이언맨");
+		person.setPhone("010-1111-2222");
+		person.setSid("2001234");
+		
+		person.print();
+		
+		Student std = new Student();
+		std.setDept("컴정");
+		std.setGender("여자");
+		std.setName("스칼렛요한슨");
+		std.setPhone("010-1234-1111");
+		std.setSid("2001112");
+		std.addGrade(98);
+		std.addGrade(97);
+		
+//		std.print();
+		person = std;
+//		메소드 오버라이딩과 상속을 이용한 다형성
+		person.print();
+		
+		Professor prof = new Professor();
+		prof.setDept("컴정");
+		prof.setGender("남자");
+		prof.setName("홍길동");
+		prof.setLectures(new String[] {"프로그래기초", "웹프로그래밍(I)"});
+		prof.setPhone("010-1234-5678");
+		prof.setSid("1012345");
+		
+//		prof.print();
+		person = prof;
+		person.print();
+		
+//		std = prof;
+//		prof = std;
+		
+	}
+
+}

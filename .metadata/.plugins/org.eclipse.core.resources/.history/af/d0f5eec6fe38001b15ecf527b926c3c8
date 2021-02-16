@@ -1,0 +1,24 @@
+
+public class Programmers6 {
+
+	public static void main(String[] args) {
+		String str = "abcde";
+		
+		solution(str);
+	}
+	
+	public static String solution(String s) {
+		String answer = "";
+		
+		int mid;
+		
+		if(s.length() %2 == 0)
+		{
+			mid = s.length()/2 + 1;
+			answer = (String)s.charAt(mid);
+		}
+		
+		return answer;
+	}
+
+}

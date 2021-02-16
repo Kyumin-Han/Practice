@@ -1,0 +1,6 @@
+package Lambda;
+
+@FunctionalInterface
+public interface MyCalculator {
+	int calculator(int n1, int n2);
+}

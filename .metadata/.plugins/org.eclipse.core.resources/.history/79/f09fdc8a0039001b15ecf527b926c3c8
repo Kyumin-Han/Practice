@@ -1,0 +1,37 @@
+
+public class Programmers7 {
+
+	public static void main(String[] args) {
+		int num1 = 3;
+		int num2 = 5;
+		
+	}
+	
+	public static long solution(int a, int b) {
+		long answer = 0;
+		
+		if(a == b)
+		{
+			answer = a;
+		}
+		else
+		{
+			int temp;
+			if(a < b)
+			{
+				temp = a;
+				a = b;
+				b = temp;
+			}
+			
+			for(int i = a; i <= b; i++)
+			{
+				answer += i;
+			}
+			
+		}
+		
+		return answer;
+	}
+
+}
