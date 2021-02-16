@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* $rem: $배 확대 */
+            /* font-size: 1.5rem; */
+        }
+
+
+        /* >: 자손 선택자
+            바로 밑에 있는 태그를 선택할때 */
+        div>p {
+            color: blue;
+        }
+
+        /* ul, ol 아래 있는 태그들은 부모 태그에서 
+        상속받는 경우가 많다 */
+        /* ul>li {
+            background-color: red;
+        } */
+
+        /* 띄어쓰기를 하면 부모 자식 관계에 상관없이
+            하위의 해당 태그에 모두 적용된다 */
+        #div1 p {
+            /* 후손 선택자 */
+            color: red;
+        }
+
+        /* 자손 해당태그 밑에 바로 붙은 태그
+            후손 태그 특정 태그 밑에 해당되는 모든 태그 */
+
+        /* 속성 선택자
+            속성 선택자를 선택할 때는 대괄호를 쓴다 */
+        input[type="password"] {
+            background-color: greenyellow;
+        }
+
+        /* 값이 없을때는 해당 속성의 이름만 적어준다 */
+        input[required] {
+            color: blue;
+        }
+
+        /* type이 submit인 경우
+            해당 태그에 마우스를 대면 나타낼 반응 = hover 
+            hover는 많이 쓰인다*/
+        input[type="submit"]:hover {
+            background-color: blue;
+            color: white;
+            font-size: 1.5em;
+            /* input의 부모인 form태그의 폰트 크기의 1.5배 */
+            font-weight: 900;
+            /* 기본 16px */
+            /* font-size를 픽셀단위를 부여하면
+                반응형 웹을 설계할때
+                화면크기에 따라서 가변적으로 만들어야한다
+                하지만 픽셀을 고정하면 작은화면에서
+                글자의 가독성이 떨어진다
+                가급적 비율로 설정한다
+                em(=%): 자기 부모의 폰트사이즈를 따라 거기의 몇배로 설정
+                기준값이 달라지면 크기가 달라진다
+                rem:  */
+            /* 메뉴를 선택할 때 해당 폰트의 굵기를 지정 = font-weight */
+        }
+
+        /* a 태그에서 링크를 없애는 것 text-decoration */
+        a {
+            font-size: 1.2em;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* 아직 방문하지 않은 링크에 적용 */
+        /* a:link {
+            color: red;
+        } */
+
+        /* 방문 기록이 있는 사이트에 적용
+            최근에는 잘 구분하지 않는다 */
+        a:visited {
+            color: black;
+        }
+
+        a:hover {
+            background-color: greenyellow;
+        }
+
+        /* 마우스 왼쪽 버튼이 눌려진 상태에서 표시될 것 */
+        a:active {
+            background-color: blue;
+        }
+
+        /* 뒤쪽에 내용을 붙인다 */
+        h1::after {
+            content: "-2020";
+        }
+
+        h1::before {
+            content: "CSS3 ";
+        }
+
+        /* 첫 글자에 관한 스타일 지정 */
+        p::first-letter {
+            font-size: 2em;
+            color: red;
+        }
+
+        /* :을 입력하면 상태를 나타낸다
+            focus는 해당 영역에 마우스를 클릭한 상태를 나타낸다 
+            벗어나면 원래 해당영역의 색깔로 돌아온다*/
+        input[type="password"]:focus {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>selector</h1>
+
+    <!-- <p>01</p>
+    <p>02</p>
+    <p>03</p> -->
+
+    <p>1 ptag</p>
+    <p>2 ptag</p>
+    <p>3 ptag</p>
+    <p>4 ptag</p>
+    <!-- <div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+
+        <div id="div1">
+            <p>3-1</p>
+            <p>3-2</p>
+            <p>3-3</p>
+        </div>
+    </div> -->
+
+    <ul>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <!-- a태그에는 밑줄이 쳐지는게 기본이다 -->
+    <a href="http://www.naver.com">네이버</a><br>
+    <a href="http://www.google.com">Google</a>
+    <form action="#">
+        <input type="text" name="id" required placeholder="아이디"><br>
+        <input type="password" name="pwd"><br><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

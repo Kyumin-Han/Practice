@@ -1,0 +1,55 @@
+body {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+header {
+    font-size: 3em;
+    background-color: forestgreen;
+    color: yellow;
+    text-align: center;
+    line-height: 100px;
+}
+
+.container {
+    /* width 지정 안하면 부모에 지정된 값과 같다 */
+    height: 500px;
+    background-color: gold;
+    position: relative;
+}
+
+nav {
+    width: 150px;
+    height: 500px;
+    background-color: yellowgreen;
+}
+
+section {
+    width: 690px;
+    height: 500px;
+    background-color: yellow;
+    position: absolute;
+    left: 155px;
+    top: 0px;
+}
+
+aside {
+    width: 150px;
+    height: 500px;
+    background-color: yellowgreen;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+footer {
+    height: 100px;
+    background-color: gray;
+}
+
+
+/* position으로 박스들을 가로로 정렬 */
+/* position: fixed
+브라우저 상단 좌측 기준 으로 설정 위치에 고정
+z-index: div 태그가 겹칠때 어떤 div의 값을 맨 위에 보여주는지 설정
+z-index 값이 제일 큰것을 맨 위에 출력 */

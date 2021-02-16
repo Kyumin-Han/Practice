@@ -1,0 +1,115 @@
+@media screen and (min-width: 250px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0 auto;
+    }
+
+    header {
+        font-size: 3em;
+        text-align: center;
+        color: black;
+        background-color: orange;
+
+        height: 80px;
+
+        line-height: 1.6;
+        margin-bottom: 1px;
+
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+        margin-bottom: 1px;
+    }
+
+    .menu {
+        list-style: none;
+        padding: 0;
+    }
+
+    .menuitem {
+        border-bottom: 1px solid gainsboro;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        font-size: 1.2em;
+        line-height: 2;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .center,
+    .right,
+    footer {
+        width: 90%;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    a:hover {
+        color: red;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    nav {
+        width: 29%;
+        height: 600px;
+        border: 1px solid gray;
+        float: left;
+    }
+
+    .center {
+        width: 70%;
+        height: 600px;
+        border: 1px solid gray;
+        float: left;
+        padding: 0 20px;
+        margin-left: 1%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        height: 600px;
+    }
+
+    nav {
+        width: 19%;
+    }
+
+    .center {
+        width: 40%;
+        margin: 0 0.5%;
+    }
+
+    .right {
+        width: 40%;
+        height: 600px;
+        border: 1px solid gray;
+        float: right;
+    }
+
+    footer {
+        border: 1px solid gray;
+        height: 120px;
+        width: 100%;
+        margin-top: 1%;
+    }
+}

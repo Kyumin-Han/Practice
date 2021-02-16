@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid blue;
+        }
+
+        th {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>표 만들기</h3>
+
+    <!-- table > tr(행) > th,td(열) -->
+    <!-- 이름, 학번, 주소, 전화번호 -->
+
+    <table>
+        <caption>J2 주소록</caption>
+        <tr>
+            <th>이름</th>
+            <th>학번</th>
+            <th>주소</th>
+            <th>연락처</th>
+        </tr>
+        <!-- <tr>
+            <td>이름</td>
+            <td>학번</td>
+            <td>주소</td>
+            <td>연락처</td>
+        </tr> -->
+        <tr>
+            <td>홍길동</td>
+            <td>1111</td>
+            <td>대구시 북구</td>
+            <td>010-1111-1111</td>
+        </tr>
+        <tr>
+            <td rowspan="2">성춘향</td>
+            <td rowspan="2">2222</td>
+            <td>대구시 동구</td>
+            <td>010-2222-2222</td>
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <td>전라남도 남원</td>
+            <td>010-2222-3333</td>
+        </tr>
+        <tr>
+            <td>임거정</td>
+            <td colspan="2">3333</td>
+            <!-- <td></td> -->
+            <td>010-4444-4444</td>
+        </tr>
+    </table>
+    <!-- colspan 좌우 합치기, rowspan 상하 합치기 -->
+
+    <!-- &quot; = " &nbsp; = space 
+    &lt; = <, &gt; = >, &amp; = &, &aposl = ' -->
+</body>
+
+</html>

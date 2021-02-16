@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* 모든 태그에서 개발자가 설정한 픽셀값으로 전체 길이를 지정한다 */
+        }
+
+        /* div = block level element */
+        div {
+            border: 10px solid blue;
+            /* border-width: 1px 10px; */
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            margin: 50px;
+            border-radius: 50px;
+            box-sizing: border-box;
+        }
+
+        /* border: border-width border-sytle border-color
+        border-width : 1px 5px 10px 20px => 위쪽부터 시계방향으로 적용
+        border-width : 1px 20px => 위아래 좌우측 방향순서로 적용
+        두께 지정은 위쪽부터 시계방향으로 조정
+        
+        margin-top
+        margin-right
+        margin-bottom
+        margin-left 로 따로 두께를 지정할 수 있다 
+        
+        padding-top
+        padding-right
+        padding-bottom
+        padding-left 로 따로따로 두께를 설정하거나
+        padding : 1px 10px는 위아래가 1px로 같고 좌우가 10px로 같다
+        
+        border-radius = 모서리를 둥글게
+        border-radius : 1px 10px 오른쪽 대각 왼쪽 대각
+        곡면이 시작하고 끝나는 점을 사각형으로 만들면 그 가로 세로 길이의 픽셀
+        
+        box-sizing : border box 
+        설정된 길이만큼 width, padding, border를 적절히 맞춰준다
+        총 길이 = 설정된 픽셀 값 + margin의 픽셀값 */
+    </style>
+</head>
+
+<body>
+    <!-- inline level
+    가지고 있는 내용의 길이만큼 길이를 가져서 따로 설정 할 수 없다
+
+    block level
+    내용의 길이가 얼마가 되던 그 줄 자체를 자신의 크기로 잡는다-->
+    <h1>Header</h1>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium incidunt explicabo voluptates inventore.
+        Sequi est laboriosam perferendis tenetur quos aliquam.
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            border: 1px solid red;
+            /* display: inline; */
+            display: inline-block;
+            /* inline 이지만 block 의 속성도 가진다 */
+            width: 300px;
+            height: 200px;
+            /* inline level은 크기를 지정해 줄 수 없다 */
+        }
+
+        a {
+            border: 1px solid blue;
+            width: 100px;
+            /* display: block; */
+        }
+
+        ul {
+            background-color: aquamarine;
+            list-style: none;
+            /* 리스트의 점을 없애준다 */
+            padding: 0;
+            /* padding 값을 없애 준다 */
+        }
+
+        li {
+            background-color: bisque;
+            border: 1px solid blue;
+            /* display: inline; */
+            display: inline-block;
+            margin: 0 10px;
+            width: 100px;
+        }
+
+        img {
+            width: 30%;
+        }
+
+        img:nth-of-type(1) {
+            /* display: none; */
+            /* 화면에 표시하지 않고 그 자리로 다음에 오는 것을 당겨서 표시*/
+            visibility: hidden;
+            /* 화면에 표시하지는 않지만 그 자리는 남겨둔다 */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore totam ab dolor! Necessitatibus libero
+        officia, error temporibus ratione, excepturi deleniti nihil incidunt dolores delectus ex provident voluptas non
+        ab magnam!
+    </div>
+
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
+    <!-- ul = padding 40px 가진다 -->
+
+    <a href="httpL//www.naver.com">네이버</a>
+    <a href="">구글</a>
+    <a href="">카카오</a>
+    <img src="./beach2.jpg" alt="">
+    <img src="./preikestolen.jpg" alt="">
+
+</body>
+
+</html>

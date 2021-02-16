@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script src="실습.js"></script> -->
+
+    <script>
+        window.addEventListener("load", randomSort);
+
+        function randomSort() {
+            const btn1 = document.querySelector("#btn1");
+
+            const btn2 = document.querySelector("#btn2");
+
+            const in1 = document.querySelector("#in1");
+
+            const in2 = document.querySelector("#in2");
+
+            let numbers = [];
+
+            in1.setAttribute("size", "35");
+
+            in2.setAttribute("size", "35");
+
+            btn1.addEventListener("click", function () {
+                for (let i = 0; i < 10; i++) {
+                    numbers[i] = Math.floor(Math.random() * 99 + 1);
+                }
+
+                in1.value = numbers.join(" , ");
+            });
+
+            btn2.addEventListener("click", function () {
+                numbers.sort(function (a, b) {
+                    return a - b;
+                    // return b - a;
+                });
+
+                in2.value = numbers.join(" , ");
+            });
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btn1">난수 생성</button>
+    <input id="in1" type="text">
+    <br>
+    <button id="btn2">난수 정렬</button>
+    <input id="in2" type="text">
+</body>
+
+</html>

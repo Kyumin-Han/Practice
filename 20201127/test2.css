@@ -1,0 +1,41 @@
+body {
+    max-width: 1500px;
+    min-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    background-color: yellowgreen;
+    margin: 0;
+}
+
+.container {
+    background-color: beige;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    margin: 1% 0;
+}
+
+nav {
+    background-color: gold;
+    width: 15%;
+}
+
+main {
+    background-color: chartreuse;
+    width: 66%;
+}
+
+img {
+    width: 100%;
+}
+
+aside {
+    background-color: gold;
+    width: 15%;
+}
+
+footer {
+    background-color: coral;
+}

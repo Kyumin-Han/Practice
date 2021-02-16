@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="dom3.js"></script> -->
+
+    <script>
+        window.addEventListener("load", function () {
+            const num = document.querySelector("input");
+
+            const ans = document.querySelector("input[name=ans]");
+
+            const btn = document.querySelector("button");
+
+            btn.addEventListener("click", function () {
+                let input = num.value;
+                let str = `${input}의 약수 >> `;
+
+                for (let i = 1; i <= input; i++) {
+                    if (input % i == 0) {
+                        str += i + " ";
+                    }
+                }
+
+                ans.value = str;
+                ans.size = str.length;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>약수</h1>
+    <input id="in1" type="text" name="num">
+    <button>약수</button>
+    <br>
+    <input id="in2" type="text" name="ans">
+    <div class="ans"></div>
+</body>
+
+</html>

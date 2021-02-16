@@ -1,0 +1,59 @@
+body {
+    width: 1000px;
+    margin: 0 auto;
+    /* 상하 margin 0 */
+}
+
+* {
+    box-sizing: border-box;
+    /* box width와 padding값 함쳐서 계산 */
+}
+
+header {
+    height: 80px;
+    background-color: blue;
+    font-size: 3em;
+    text-align: center;
+}
+
+.container {
+    height: 600px;
+    /* background-color: yellow; */
+    margin: 10px 0;
+}
+
+.container nav,
+.container aside {
+    width: 150px;
+    height: 600px;
+    border: 1px solid gray;
+    padding: 10px;
+    float: left;
+}
+
+.container section {
+    width: 680px;
+    height: 600px;
+    border: 1px solid gray;
+    float: left;
+    margin: 0 10px;
+}
+
+.container p {
+    padding: 0 10px;
+}
+
+.container .box {
+    width: 220px;
+    height: 480px;
+    border: 1px solid red;
+    float: left;
+    margin-left: 5px;
+}
+
+
+
+footer {
+    height: 50px;
+    border: 1px solid gray;
+}

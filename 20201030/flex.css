@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+body {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 100px;
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    line-height: 100px;
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
+    margin-bottom: 10px;
+}
+
+.container {
+    /* margin-top: 10px; */
+    height: 500px;
+    /* background-color: skyblue; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1 {
+    width: 13%;
+    height: 500px;
+    /* background-color: yellow; */
+    font-family: 'Gugi', cursive;
+    border: 1px solid gainsboro;
+}
+
+ul {
+    list-style: none;
+    float: left;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 130px;
+    color: black;
+    line-height: 2;
+}
+
+a:hover {
+    background-color: yellowgreen;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Gugi', cursive;
+}
+
+.box2 {
+    width: 43%;
+    height: 500px;
+    /* background-color: green; */
+    text-overflow: ellipsis;
+    font-family: 'Jua', sans-serif;
+    border: 1px solid gainsboro;
+    overflow: auto;
+    padding: 0 10px;
+}
+
+.box3 {
+    width: 43%;
+    height: 500px;
+    text-overflow: ellipsis;
+    /* background-color: tan; */
+    font-family: 'Jua', sans-serif;
+    border: 1px solid gainsboro;
+    overflow: auto;
+    padding: 0 10px;
+}
